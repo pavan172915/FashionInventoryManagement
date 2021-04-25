@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #E5FFB3;
+  --background-accent: #DBF8A3;
+  --background-accent-2: #BDE66E;
+  --light: #92DE34;
+  --dark: #69BC22;
+  --text: #025600;
+}
+
+body {
+  background-color: var(--background);
+  background-image: linear-gradient(
+    var(--background-accent-2) 50%,
+    var(--background-accent) 50%
+  ), linear-gradient(
+    var(--background-accent) 50%,
+    var(--background-accent-2) 50%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 30px;
+  background-position: top left, bottom left;
+  min-height: 98vh;
+}
+
+div {
+  display: block;
+  width: 400px;
+  margin: 0 auto 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30vh;
+}
+
+input[type="submit"] {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--light);
+  width: 400px;
+  height: 70px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  background-size: 100% 100%;
+  box-shadow: 0 0 0 7px var(--light) inset;
+  margin-bottom: 15px;
+}
+header {
+  color:grey;
+  padding-top: 5vw;
+  padding-bottom: 30vw;
+  text-align: center;
+  font-size:50px;
+}
+input[type="submit"]:hover {
+  background-image: linear-gradient(
+    145deg,
+    transparent 10%,
+    var(--dark) 10% 20%,
+    transparent 20% 30%,
+    var(--dark) 30% 40%,
+    transparent 40% 50%,
+    var(--dark) 50% 60%,
+    transparent 60% 70%,
+    var(--dark) 70% 80%,
+    transparent 80% 90%,
+    var(--dark) 90% 100%
+  );
+  animation: background 3s linear infinite;
+}
+
+@keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+</style>
+<body>
+    <header>Update Sales Details</header>
+    <div>
+        <form method="get" action="/update_sales/update_existing">
+        <input type="submit" name="Update Existing" value="Update Existing">
+        </form>
+        <form method="post" action="/">
+        <input type="submit" name="Add New" value="Add New">
+        </form>
+</div>
+</body>
+</html>

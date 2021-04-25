@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+  
+}
+
+input[type=text], select, textarea {
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-left:400px;
+  vertical-align: top;
+  
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  margin-left:20px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-left: 300px;
+  margin-top: 70px;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=reset] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-left: 300px;
+  margin-top: 70px;
+}
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: 550px;
+  margin-top: 150px;
+  margin-right: 250px;
+  width: 3000px;
+  height: 545px;
+}
+.container {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+.col-25 {
+  float: inline-start;
+  width: 25%;
+  margin-top: 10px;
+  margin-left: 250px;
+}
+
+.col-75 {
+  float: left;
+  width: 55%;
+  margin-top: -52px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+fieldset {
+  background-color: #eeeeee;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  
+  width:50%;
+}
+.M{
+   margin-top: 10px;
+}
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 50%;
+    margin-top: 0;
+    margin-left: 2500px;
+  }
+}
+</style>
+</head>
+<body>
+    <div class="M">
+<div class="container">
+  <form method ="post" action="edit_sales">
+      <fieldset>
+          <legend>Add Sales</legend>
+      </fieldset>
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Purchase Date</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Product Id" name="purchase_date" placeholder="DD-MM-YYYY">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Product Id</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Brand" name="product_id" placeholder="Product Id..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Unit Price</label>
+    </div>
+    <div class="col-75">
+     <input type="text" id="Category" name="unit_price" placeholder="Price Of Single Item...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Quantity</label>
+    </div>
+    <div class="col-75">
+     <input type="text" id="o_stock" name="new_quantity" placeholder="Quantity">
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
+  </div>
+  </form>
+</div>
+</div>
+
+</body>
+</html>
